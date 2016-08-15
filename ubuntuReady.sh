@@ -16,7 +16,8 @@
 	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 	
 	##Ubuntu Restricted Extras
-	sudo apt-add-repository ppa:mc3man/trusty-media ppa:gnome3-team/gnome3 -y
+	sudo apt-add-repository ppa:mc3man/trusty-media -y 
+	sudo apt-add-repository ppa:gnome3-team/gnome3 -y
 	
 	##Clementine (Music Player)
 	sudo add-apt-repository ppa:me-davidsansome/clementine -y
@@ -25,7 +26,7 @@
 	sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ trusty partner" -y
 	
 	##Ubuntu optional packages
-	sudo apt-add-repositories ppa:maarten-baert/simplescreenrecorder -y
+	sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder -y
 
 	##Numix Themes & Icons
 	sudo add-apt-repository ppa:numix/ppa -y
