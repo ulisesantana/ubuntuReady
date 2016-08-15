@@ -124,5 +124,10 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	##Create a $HOME/WEB directory for projects
 	mkdir APPS
 	sudo chown $USER: APPS/
+<<<<<<< HEAD
 
 sudo apt-get autoremove -y
+=======
+	echo "$USER"
+
+>>>>>>> master
