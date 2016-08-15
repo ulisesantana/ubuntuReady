@@ -45,7 +45,7 @@
 	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 
 	##Atom
-	wget https://atom.io/download/deb
+	wget https://github.com/atom/atom/releases/download/v1.9.8/atom-amd64.deb
 
 
 
