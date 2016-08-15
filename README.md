@@ -40,7 +40,7 @@ bash ubuntuReady.sh
 rm ubuntuReady.sh
 ```
 
-## Aditional steps
+## Additional steps
 
 ubuntuReady update and install all you need for your Ubuntu, but not configure anything. I mean, ubuntuReady download Royal Theme and Numix Circle Icons, but doesn't set it. For this you must use **Unity Tweak Tool** as I show down. Open Unity Tweak Tools:
 
@@ -50,6 +50,7 @@ Go to *Appereance > Themes*
 
 
 Go to *Appereance > Icons*
+
 ![Set Numix Circle Icons](https://github.com/ulisesantana/ubuntuReady/raw/master/img/setIcons.png)
 
 
