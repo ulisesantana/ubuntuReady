@@ -16,12 +16,8 @@
 	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 	
 	##Ubuntu Restricted Extras
-<<<<<<< HEAD
 	sudo apt-add-repository ppa:mc3man/trusty-media -y 
 	sudo apt-add-repository ppa:gnome3-team/gnome3 -y
-=======
-	sudo apt-add-repository ppa:mc3man/trusty-media ppa:gnome3-team/gnome3 -y
->>>>>>> master
 	
 	##Clementine (Music Player)
 	sudo add-apt-repository ppa:me-davidsansome/clementine -y
@@ -30,11 +26,7 @@
 	sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ trusty partner" -y
 	
 	##Ubuntu optional packages
-<<<<<<< HEAD
 	sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder -y
-=======
-	sudo apt-add-repositories ppa:maarten-baert/simplescreenrecorder -y
->>>>>>> master
 
 	##Numix Themes & Icons
 	sudo add-apt-repository ppa:numix/ppa -y
@@ -50,10 +42,10 @@
 	sudo add-apt-repository ppa:git-core/ppa -y
 	
 	##Gitkraken
-	wget -q -O https://release.gitkraken.com/linux/gitkraken-amd64.deb
+	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 
 	##Atom
-	wget -q -O https://atom.io/download/deb
+	wget https://atom.io/download/deb
 
 
 
@@ -132,5 +124,5 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	##Create a $HOME/WEB directory for projects
 	mkdir APPS
 	sudo chown $USER: APPS/
-
+	echo "$USER"
 
