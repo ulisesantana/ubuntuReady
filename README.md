@@ -26,6 +26,7 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Atom
   - nvm (Node Version Manager)
   - *Create an APPS directory for storage projects.*
+- Autoremove trash files
 
 ## Install
 
@@ -41,12 +42,14 @@ rm ubuntuReady.sh
 
 ## Aditional steps
 
-ubuntuReady update and install all you need for your Ubuntu, but not configure anything. I mean, ubuntuReady download Royal Theme and Numix Circle Icons, but doesn't set it. For this you must use **Unity Tweak Tool** as I show down.
+ubuntuReady update and install all you need for your Ubuntu, but not configure anything. I mean, ubuntuReady download Royal Theme and Numix Circle Icons, but doesn't set it. For this you must use **Unity Tweak Tool** as I show down. Open Unity Tweak Tools:
+
+Go to *Appereance > Themes*
 
 ![Set Royal Theme](https://github.com/ulisesantana/ubuntuReady/raw/master/img/setTheme.png)
-*Appereance > Themes*
 
+
+Go to *Appereance > Icons*
 ![Set Numix Circle Icons](https://github.com/ulisesantana/ubuntuReady/raw/master/img/setIcons.png)
-*Appereance > Icons*
 
 
