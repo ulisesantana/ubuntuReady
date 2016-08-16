@@ -2,45 +2,45 @@
 #ubuntuReady
 
 #ADD ALL REPOSITORIES WE NEED
-	
+
 	##BASIC REPOSITORIES
 
 	##GIMP
-	sudo apt-add-repository ppa:otto-kesselgulasch/gimp -y 
-	
+	sudo apt-add-repository ppa:otto-kesselgulasch/gimp -y
+
 	##Nvidia Graphics Driver
-	sudo add-apt-repository ppa:graphics-drivers/ppa -y 
-	
+	sudo add-apt-repository ppa:graphics-drivers/ppa -y
+
 	##Google Chrome
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-	
+
 	##Ubuntu Restricted Extras
-	sudo apt-add-repository ppa:mc3man/trusty-media -y 
+	sudo apt-add-repository ppa:mc3man/trusty-media -y
 	sudo apt-add-repository ppa:gnome3-team/gnome3 -y
-	
+
 	##Clementine (Music Player)
 	sudo add-apt-repository ppa:me-davidsansome/clementine -y
-	
+
 	##Skype
 	sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ trusty partner" -y
-	
+
 	##Ubuntu optional packages
 	sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder -y
 
 	##Numix Themes & Icons
 	sudo add-apt-repository ppa:numix/ppa -y
 	sudo add-apt-repository ppa:noobslab/themes -y
-	
+
 
 	##DEV STUFF REPOSITORIES
 
 	##Java 8
 	sudo add-apt-repository ppa:webupd8team/java -y
-	
+
 	##Git
 	sudo add-apt-repository ppa:git-core/ppa -y
-	
+
 	##Gitkraken
 	wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 
@@ -90,7 +90,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	sudo apt-get install numix-icon-theme-circle -y
 	sudo apt-get install numix-icon-theme numix-icon-theme-circle royal-gtk-theme
 
-	##Install Unity Tweak Tool 
+	##Install Unity Tweak Tool
 	sudo apt-get install unity-tweak-tool -y
 
 	##Install slurm (network traffic monitor)
@@ -106,7 +106,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 
 	##Install the latest git Version
 	sudo apt-get install git -y
-	
+
 	##Install Filezilla
 	sudo apt-get install filezilla -y
 
@@ -117,6 +117,16 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	##Install Atom
 	sudo dpkg -i atom-amd64.deb
 	rm atom-amd64.deb
+
+	##Install Atom packages
+	apm install emmet
+	apm install minimap
+	apm install atom-terminal
+	apm install atom-material-ui
+	apm install atom-material-syntax-dark
+	apm install atom-beautify
+	apm install color-picker
+	apm install file-icons
 
 	##Install Node Version Manager
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash

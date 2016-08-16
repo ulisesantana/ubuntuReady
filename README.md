@@ -18,12 +18,19 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Slurm
   - GIMP
   - Basic packages
-- Install all development stuff 
+- Install all development stuff
   - Java 8 JDK
   - Git
   - Filezilla
   - Gitkraken
-  - Atom
+  - Atom & Atom packages:
+    - Emmet
+    - Minimap
+    - Atom Terminal
+    - Atom Material Design Theme with dark syntax
+    - Atom Beautify
+    - Color Picker
+    - File Icons
   - nvm (Node Version Manager)
   - *Create an APPS directory for storage projects.*
 - Autoremove trash files
@@ -52,5 +59,3 @@ Go to *Appereance > Themes*
 Go to *Appereance > Icons*
 
 ![Set Numix Circle Icons](https://github.com/ulisesantana/ubuntuReady/raw/master/img/setIcons.png)
-
-
