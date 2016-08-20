@@ -132,8 +132,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 
 	##Create a $HOME/WEB directory for projects
-	mkdir APPS
-	sudo chown $USER: APPS/
+	mkdir apps
 
 # AUTOREMOVE TRASH FILES
 sudo apt-get autoremove -y
