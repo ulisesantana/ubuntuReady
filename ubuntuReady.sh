@@ -131,7 +131,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	##Install Node Version Manager
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 
-	##Create a $HOME/WEB directory for projects
+	##Create a $HOME/apps directory for projects
 	mkdir apps
 
 # AUTOREMOVE TRASH FILES
