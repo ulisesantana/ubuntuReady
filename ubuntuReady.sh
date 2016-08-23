@@ -127,6 +127,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	apm install atom-beautify
 	apm install color-picker
 	apm install file-icons
+	apm install atom-typescript
 
 	##Install Node Version Manager
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
