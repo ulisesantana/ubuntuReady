@@ -128,12 +128,20 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	apm install color-picker
 	apm install file-icons
 
+	##Configrate Markdown Preview fixing Emmet Keybindign issue
+	echo "'atom-workspace, atom-workspace atom-text-editor':
+	  'ctrl-shift-alt-M': 'markdown-preview:toggle'
+		" >> $HOME/.atom/keymap.cson
+
+	##Add a auto indent shortcut (alt+shift+f)
+	echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson
+
 	##Install Node Version Manager
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 
-	##Create a $HOME/WEB directory for projects
-	mkdir APPS
-	sudo chown $USER: APPS/
+	##Create a $HOME/apps directory for projects
+	mkdir apps
+	sudo chown $USER: apps/
 
 # AUTOREMOVE TRASH FILES
 sudo apt-get autoremove -y
