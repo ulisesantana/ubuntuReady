@@ -31,6 +31,7 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
     - Atom Beautify
     - Color Picker
     - File Icons
+    - Atom Typescript plugin
   - nvm (Node Version Manager)
   - *Create an APPS directory for storage projects.*
 - Autoremove trash files

@@ -127,6 +127,7 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 	apm install atom-beautify
 	apm install color-picker
 	apm install file-icons
+	apm install atom-typescript
 
 	##Configrate Markdown Preview fixing Emmet Keybindign issue
 	echo "'atom-workspace, atom-workspace atom-text-editor':
@@ -141,7 +142,6 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 
 	##Create a $HOME/apps directory for projects
 	mkdir apps
-	sudo chown $USER: apps/
 
 # AUTOREMOVE TRASH FILES
 sudo apt-get autoremove -y
