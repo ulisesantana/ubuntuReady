@@ -19,8 +19,8 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 sudo apt-add-repository ppa:mc3man/trusty-media -y
 sudo apt-add-repository ppa:gnome3-team/gnome3 -y
 
-##Clementine (Music Player)
-sudo add-apt-repository ppa:me-davidsansome/clementine -y
+##Guayadeque (Music Player)
+sudo add-apt-repository ppa:anonbeat/guayadeque -y
 
 ##Skype
 sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ trusty partner" -y
@@ -34,9 +34,6 @@ sudo add-apt-repository ppa:noobslab/themes -y
 
 
 ##DEV STUFF REPOSITORIES
-
-##Java 8
-sudo add-apt-repository ppa:webupd8team/java -y
 
 ##Git
 sudo add-apt-repository ppa:git-core/ppa -y
@@ -76,8 +73,8 @@ sudo apt-get install software-properties-common -y
 ##Enable DVD Playback
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
-##Install Clementine
-sudo apt-get install clementine -y
+##Install Guayadeque
+sudo apt-get install guayadeque -y
 
 ##Install Skype
 sudo apt-get install skype -y
@@ -88,7 +85,7 @@ sudo apt-get install aptitude apt-file qbittorrent quiterss dconf-editor gnome-s
 
 ##Royal theme & Numix circle icons
 sudo apt-get install numix-icon-theme-circle -y
-sudo apt-get install numix-icon-theme numix-icon-theme-circle royal-gtk-theme
+sudo apt-get install numix-icon-theme numix-icon-theme-circle royal-gtk-theme -y
 
 ##Install Unity Tweak Tool
 sudo apt-get install unity-tweak-tool -y
@@ -101,9 +98,6 @@ sudo apt-get install gimp -y
 
 
 #INSTALL DEVELOPMENT STUFF
-##Install Java 8
-sudo apt-get install oracle-java8-installer -y
-
 ##Install the latest git Version
 sudo apt-get install git -y
 
@@ -120,7 +114,7 @@ rm atom-amd64.deb
 
 ##Install Atom packages
 apm install atom-beautify
-apm install atom-bootstrap
+apm install atom-bootstrap3
 apm install atom-html-preview
 apm install atom-material-syntax-dark
 apm install atom-material-ui
@@ -135,11 +129,12 @@ apm install markdown-pdf
 apm install minimap
 apm install pigments
 apm install turbo-javascript
+apm install platformio-ide-terminal
 
 ##Configrate Markdown Preview fixing Emmet Keybindign issue
-echo "'atom-workspace, atom-workspace atom-text-editor':
-'ctrl-shift-alt-M': 'markdown-preview:toggle'
-" >> $HOME/.atom/keymap.cson
+echo "
+  'atom-workspace, atom-workspace atom-text-editor':
+    'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
 
 ##Add a auto indent shortcut (alt+shift+f)
 echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson

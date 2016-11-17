@@ -11,7 +11,7 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Nvidia graphics drivers
   - Google Chrome (duplicate plank fixed)
   - Compression stuff
-  - Clementine
+  - Guayadeque
   - Skype
   - Royal Theme && Numix circle icons
   - Unity Tweak Tool
@@ -19,26 +19,30 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - GIMP
   - Basic packages
 - Install all development stuff
-  - Java 8 JDK
   - Git
   - Filezilla
   - Gitkraken
   - Atom & Atom packages:
     - Emmet
     - Minimap
-    - Atom Terminal
+    - Bootstrap 3 snippets
+    - HTML Preview
     - Atom Material Design Theme with dark syntax
     - Atom Beautify
     - Color Picker
+    - Pigments
+    - Markdown to PDF
     - File Icons
     - Atom Typescript plugin
+    - Turbo Javascript
+    - PlatformIO IDE Terminal
   - nvm (Node Version Manager)
   - *Create an APPS directory for storage projects.*
 - Autoremove trash files
 
 ## Install
 
-For no having problems with the **APPS** directory run without sudo. A code example for clean and fast install:
+For no having problems with the **apps** directory run without sudo. A code example for clean and fast install:
 
 ```bash
 cd
