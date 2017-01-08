@@ -132,15 +132,14 @@ apm install turbo-javascript
 apm install platformio-ide-terminal
 
 ##Configrate Markdown Preview fixing Emmet Keybindign issue
-echo "
-  'atom-workspace, atom-workspace atom-text-editor':
-    'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
+echo "'atom-workspace, atom-workspace atom-text-editor':
+  'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
 
 ##Add a auto indent shortcut (alt+shift+f)
 echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson
 
 ##Install Node Version Manager
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
 ##Create a $HOME/apps directory for projects
 mkdir apps
