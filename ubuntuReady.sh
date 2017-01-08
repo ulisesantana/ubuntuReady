@@ -84,7 +84,6 @@ sudo apt-get install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 -y
 sudo apt-get install aptitude apt-file qbittorrent quiterss dconf-editor gnome-system-monitor simplescreenrecorder quassel-qt4 bleachbit kid3-qt calibre pinta unetbootin gnome-disk-utility vlc browser-plugin-vlc build-essential jockey-gtk -y
 
 ##Royal theme & Numix circle icons
-sudo apt-get install numix-icon-theme-circle -y
 sudo apt-get install numix-icon-theme numix-icon-theme-circle royal-gtk-theme -y
 
 ##Install Unity Tweak Tool
@@ -132,15 +131,14 @@ apm install turbo-javascript
 apm install platformio-ide-terminal
 
 ##Configrate Markdown Preview fixing Emmet Keybindign issue
-echo "
-  'atom-workspace, atom-workspace atom-text-editor':
-    'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
+echo "'atom-workspace, atom-workspace atom-text-editor':
+  'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
 
 ##Add a auto indent shortcut (alt+shift+f)
 echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson
 
 ##Install Node Version Manager
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
 ##Create a $HOME/apps directory for projects
 mkdir apps
