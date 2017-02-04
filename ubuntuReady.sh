@@ -44,6 +44,10 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 ##Atom
 wget https://github.com/atom/atom/releases/download/v1.9.8/atom-amd64.deb
 
+## MongoDB keys import for repositories
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 -y
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
 
 
 #UPDATE THE SYSTEM
@@ -117,8 +121,6 @@ apm install atom-bootstrap3
 apm install atom-html-preview
 apm install atom-material-syntax-dark
 apm install atom-material-ui
-apm install atom-terminal
-apm install atom-typescript
 apm install color-picker
 apm install emmet
 apm install file-icons
@@ -129,6 +131,7 @@ apm install minimap
 apm install pigments
 apm install turbo-javascript
 apm install platformio-ide-terminal
+apm install atom-pair
 
 ##Configrate Markdown Preview fixing Emmet Keybindign issue
 echo "'atom-workspace, atom-workspace atom-text-editor':
@@ -139,6 +142,31 @@ echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson
 
 ##Install Node Version Manager
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+
+## Install LAMP
+sudo apt-get install -y apache2
+sudo apt-get install -y php7.1 libapache2-mod-php7.1 php7.1-mcrypt
+sudo apt-get install -y mysql-server libaprutil1-dbd-mysql php7.1-mysql
+sudo apt-get install -y phpmyadmin
+
+## Install Mongo
+# CONFIG FOR /etc/system/mongob.service
+
+# [Unit]
+# Description=High-performance, schema-free document-oriented database
+# After=network.target
+#
+# [Service]
+# User=mongodb
+# ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+#
+# [Install]
+# WantedBy=multi-user.target
+
+
+# THEN
+# sudo apt-get install -y mongodb-org
+# sudo systemctl enable mongodb
 
 ##Create a $HOME/apps directory for projects
 mkdir apps

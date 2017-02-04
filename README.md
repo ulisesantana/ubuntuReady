@@ -19,6 +19,8 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - GIMP
   - Basic packages
 - Install all development stuff
+  - LAMP
+  - MongoDB *(config commented with the commands)*
   - Git
   - Filezilla
   - Gitkraken
@@ -36,13 +38,14 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
     - Atom Typescript plugin
     - Turbo Javascript
     - PlatformIO IDE Terminal
+    - Atom Pair
   - nvm (Node Version Manager)
-  - *Create an APPS directory for storage projects.*
+  - *Create an apps directory for projects storage.*
 - Autoremove trash files
 
 ## Install
 
-For no having problems with the **apps** directory run without sudo. A code example for clean and fast install:
+For no having problems with the **apps** directory run it without sudo. A code example for fast and clean install:
 
 ```bash
 cd
