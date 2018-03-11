@@ -19,11 +19,8 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 sudo apt-add-repository ppa:mc3man/trusty-media -y
 sudo apt-add-repository ppa:gnome3-team/gnome3 -y
 
-##Guayadeque (Music Player)
-sudo add-apt-repository ppa:anonbeat/guayadeque -y
-
 ##Skype
-sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ trusty partner" -y
+sudo apt-add-repository "deb http://archive.canonical.com/ubuntu/ xenial partner" -y
 
 ##Ubuntu optional packages
 sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder -y
@@ -32,22 +29,19 @@ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder -y
 sudo add-apt-repository ppa:numix/ppa -y
 sudo add-apt-repository ppa:noobslab/themes -y
 
+## Add Steam repository
+sudo add-apt-repository multiverse
+
 
 ##DEV STUFF REPOSITORIES
 
 ##Git
 sudo add-apt-repository ppa:git-core/ppa -y
 
-##Gitkraken
-wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
 
-##Atom
-wget https://github.com/atom/atom/releases/download/v1.9.8/atom-amd64.deb
-
-## MongoDB keys import for repositories
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 -y
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-
+##Docker
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 
 
 #UPDATE THE SYSTEM
@@ -66,10 +60,14 @@ sudo sed -i "s/\/usr\/bin\/google-chrome-stable/\/usr\/bin\/google-chrome/g" /us
 sudo sed -i "s/StartupWMClass=Google-chrome-stable//g" /usr/share/applications/google-chrome.desktop
 
 ##Install File Compression Libs
-sudo apt-get install unace unrar zip unzip xz-utils p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract file-roller -y
+sudo apt-get install unace unrar zip unzip xz-utils p7zip-full p7zip-rar -y
+sudo apt-get sharutils rar uudeview mpack arj cabextract file-roller -y
 
 ##Install Ubuntu Restricted Extras
-sudo apt-get install ubuntu-restricted-extras ubuntu-restricted-addons ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav gdebi curl flashplugin-installer dconf-editor gnome-system-monitor -y
+sudo apt-get install ubuntu-restricted-extras ubuntu-restricted-addons ffmpeg -y
+sudo apt-get install gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 -y
+sudo apt-get install libmad0 mpg321 gstreamer1.0-libav gdebi curl flashplugin-installer -y
+sudo apt-get install dconf-editor gnome-system-monitor -y
 
 ##Install common repositories manager
 sudo apt-get install software-properties-common -y
@@ -77,21 +75,30 @@ sudo apt-get install software-properties-common -y
 ##Enable DVD Playback
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
-##Install Guayadeque
-sudo apt-get install guayadeque -y
+##Install Slack
+sudo snap install slack --classic 
+
+##Install Telegram
+sudo snap install telegram-sergiusens
 
 ##Install Skype
 sudo apt-get install skype -y
 sudo apt-get install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 -y
 
+##Install GNOME Pomodoro Timer
+sudo apt-get install gnome-shell-pomodoro -y
+
+##Install Steam
+sudo apt-get install steam -y
+
 ##Install more packages
-sudo apt-get install aptitude apt-file qbittorrent quiterss dconf-editor gnome-system-monitor simplescreenrecorder quassel-qt4 bleachbit kid3-qt calibre pinta unetbootin gnome-disk-utility vlc browser-plugin-vlc build-essential jockey-gtk -y
+sudo apt-get sudo apt-get install aptitude apt-file qbittorrent quiterss dconf-editor  -y
+sudo apt-get gnome-system-monitor simplescreenrecorder quassel-qt4  -y
+sudo apt-get bleachbit kid3-qt calibre pinta unetbootin gnome-disk-utility  -y
+sudo apt-get vlc browser-plugin-vlc build-essential jockey-gtk -y
 
 ##Royal theme & Numix circle icons
 sudo apt-get install numix-icon-theme numix-icon-theme-circle royal-gtk-theme -y
-
-##Install Unity Tweak Tool
-sudo apt-get install unity-tweak-tool -y
 
 ##Install slurm (network traffic monitor)
 sudo apt-get install slurm -y
@@ -104,72 +111,96 @@ sudo apt-get install gimp -y
 ##Install the latest git Version
 sudo apt-get install git -y
 
+##Install docker
+sudo apt-get install -y docker-engine
+sudo usermod -aG docker $(whoami) # Enable use docker without sudo
+
+##Install Node Version Manager
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 ##Install Filezilla
 sudo apt-get install filezilla -y
 
-##Install Gitkraken
-sudo dpkg -i gitkraken-amd64.deb
-rm gitkraken-amd64.deb
+##Download Jetbrains Toolbox App
+wget -qO- https://www.jetbrains.com/toolbox/download/download-thanks.html?platform=linux
 
-##Install Atom
-sudo dpkg -i atom-amd64.deb
-rm atom-amd64.deb
+##Install Postman
+wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
+sudo tar -xzf postman.tar.gz -C /opt
+rm postman.tar.gz
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
-##Install Atom packages
-apm install atom-beautify
-apm install atom-bootstrap3
-apm install atom-html-preview
-apm install atom-material-syntax-dark
-apm install atom-material-ui
-apm install color-picker
-apm install emmet
-apm install file-icons
-apm install language-javascript-jsx
-apm install linter
-apm install markdown-pdf
-apm install minimap
-apm install pigments
-apm install turbo-javascript
-apm install platformio-ide-terminal
-apm install atom-pair
+###Create Postman Launcher
+cat > ~/.local/share/applications/postman.desktop <<EOL
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=postman
+Icon=/opt/Postman/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+EOL
 
-##Configrate Markdown Preview fixing Emmet Keybindign issue
-echo "'atom-workspace, atom-workspace atom-text-editor':
-  'ctrl-shift-alt-M': 'markdown-preview:toggle'" >> $HOME/.atom/keymap.cson
+##Install Visual Studio Code
+wget -qO- https://code.visualstudio.com/docs/?dv=linux64_deb
+sudo dpkg -i code*amd64.deb
+rm code*amd64.deb
 
-##Add a auto indent shortcut (alt+shift+f)
-echo "'alt-shift-f': 'editor:auto-indent'" >> $HOME/.atom/keymap.cson
-
-##Install Node Version Manager
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
-
-## Install LAMP
-sudo apt-get install -y apache2
-sudo apt-get install -y php7.1 libapache2-mod-php7.1 php7.1-mcrypt
-sudo apt-get install -y mysql-server libaprutil1-dbd-mysql php7.1-mysql
-sudo apt-get install -y phpmyadmin
-
-## Install Mongo
-# CONFIG FOR /etc/system/mongob.service
-
-# [Unit]
-# Description=High-performance, schema-free document-oriented database
-# After=network.target
-#
-# [Service]
-# User=mongodb
-# ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
-#
-# [Install]
-# WantedBy=multi-user.target
+##Install Visual Studio packages
+code --install-extension ikappas.phpcs
+code --install-extension ms-vscode.Theme-MarkdownKit
+code --install-extension sakryukov.convert-markdown-to-html
+code --install-extension whatwedo.twig yzane.markdown-pdf
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension be5invis.toml
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
+code --install-extension leizongmin.node-module-intellisense
+code --install-extension eg2.vscode-npm-script
+code --install-extension hnw.vscode-auto-open-markdown-preview
+code --install-extension lukehoban.Go
+code --install-extension negokaz.live-server-preview
+code --install-extension prashaantt.node-tdd
+code --install-extension xabikos.JavaScriptSnippets
+code --install-extension ryu1kn.annotator
+code --install-extension waderyan.gitblame
 
 
-# THEN
-# sudo apt-get install -y mongodb-org
-# sudo systemctl enable mongodb
+##Configurate Visual Studio Code
+config=$(cat <<-END
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.projectDetection.autoReload": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "files.autoSave": "off",
+    "mocha.files.glob": "**/**/*.test.js",
+    "vsicons.dontShowNewVersionMessage": true,
+    "git.confirmSync": false,
+    "editor.rulers": [80]
+}
+END
+)
 
-##Create a $HOME/apps directory for projects
-mkdir apps
+##Add custom shortcuts to Visual Studio Code
+keybindings=$(cat <<-END
+[
+    { "key": "shift+alt+d",   "command": "editor.action.copyLinesDownAction",
+                                     "when": "editorTextFocus && !editorReadonly" }
+]
+END
+)
+
+echo $config >> $HOME/.config/Code/User/settings.json
+echo $keybindings >> $HOME/.config/Code/User/keybindings.json
+
+##Create a $HOME/projects and $HOME/projects/lab directory for projects
+mkdir -p projects/lab
 
 # AUTOREMOVE TRASH FILES
 sudo apt-get autoremove -y
