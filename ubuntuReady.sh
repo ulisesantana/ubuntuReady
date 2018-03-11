@@ -125,7 +125,9 @@ export NVM_DIR="$HOME/.nvm"
 sudo apt-get install filezilla -y
 
 ##Download Jetbrains Toolbox App
-wget -qO- https://www.jetbrains.com/toolbox/download/download-thanks.html?platform=linux
+wget -qO- https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.7.3593.tar.gz
+mkdir Toolbox && tar -xzvf jetbrains-toolbox-1.7.3593.tar.gz -C $_ --strip-components=1
+rm -rf jetbrains-toolbox-1.7.3593.tar.gz
 
 ##Install Postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
@@ -144,60 +146,6 @@ Terminal=false
 Type=Application
 Categories=Development;
 EOL
-
-##Install Visual Studio Code
-wget -qO- https://code.visualstudio.com/docs/?dv=linux64_deb
-sudo dpkg -i code*amd64.deb
-rm code*amd64.deb
-
-##Install Visual Studio packages
-code --install-extension ikappas.phpcs
-code --install-extension ms-vscode.Theme-MarkdownKit
-code --install-extension sakryukov.convert-markdown-to-html
-code --install-extension whatwedo.twig yzane.markdown-pdf
-code --install-extension PeterJausovec.vscode-docker
-code --install-extension be5invis.toml
-code --install-extension christian-kohler.npm-intellisense
-code --install-extension christian-kohler.path-intellisense
-code --install-extension leizongmin.node-module-intellisense
-code --install-extension eg2.vscode-npm-script
-code --install-extension hnw.vscode-auto-open-markdown-preview
-code --install-extension lukehoban.Go
-code --install-extension negokaz.live-server-preview
-code --install-extension prashaantt.node-tdd
-code --install-extension xabikos.JavaScriptSnippets
-code --install-extension ryu1kn.annotator
-code --install-extension waderyan.gitblame
-
-
-##Configurate Visual Studio Code
-config=$(cat <<-END
-{
-    "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.projectDetection.autoReload": true,
-    "editor.tabSize": 2,
-    "window.zoomLevel": 0,
-    "files.autoSave": "off",
-    "mocha.files.glob": "**/**/*.test.js",
-    "vsicons.dontShowNewVersionMessage": true,
-    "git.confirmSync": false,
-    "editor.rulers": [80]
-}
-END
-)
-
-##Add custom shortcuts to Visual Studio Code
-keybindings=$(cat <<-END
-[
-    { "key": "shift+alt+d",   "command": "editor.action.copyLinesDownAction",
-                                     "when": "editorTextFocus && !editorReadonly" }
-]
-END
-)
-
-echo $config >> $HOME/.config/Code/User/settings.json
-echo $keybindings >> $HOME/.config/Code/User/keybindings.json
 
 ##Create a $HOME/projects and $HOME/projects/lab directory for projects
 mkdir -p projects/lab
