@@ -24,7 +24,7 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Git
   - Filezilla
   - Docker
-  - Jetbrains Toolbox (Only downloads)
+  - Jetbrains Toolbox (Only download)
   - Postman
   - Visual Studio Code (with custom config and packages)
   - nvm (Node Version Manager)
