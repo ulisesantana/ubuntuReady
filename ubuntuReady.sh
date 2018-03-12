@@ -124,11 +124,6 @@ export NVM_DIR="$HOME/.nvm"
 ##Install Filezilla
 sudo apt-get install filezilla -y
 
-##Download Jetbrains Toolbox App
-wget -qO- https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.7.3593.tar.gz
-mkdir Toolbox && tar -xzvf jetbrains-toolbox-1.7.3593.tar.gz -C $_ --strip-components=1
-rm -rf jetbrains-toolbox-1.7.3593.tar.gz
-
 ##Install Postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
