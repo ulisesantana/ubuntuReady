@@ -24,7 +24,6 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Git
   - Filezilla
   - Docker
-  - Jetbrains Toolbox 
   - Postman
   - nvm (Node Version Manager)
   - *Create a projects directory for projects storage. Also creates a lab directory inside projects.*
