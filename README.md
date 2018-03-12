@@ -14,7 +14,6 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - Skype
   - Slack
   - Steam
-  - Telegram
   - GNOME Pomodoro Timer
   - Royal Theme && Numix circle icons
   - Slurm
@@ -28,6 +27,10 @@ This is the script I use for all my just installed Ubuntu. I divide the script i
   - nvm (Node Version Manager)
   - *Create a projects directory for projects storage. Also creates a lab directory inside projects.*
 - Autoremove trash files
+- Downloads:
+  - Jetbrains Toolbox
+  - Telegram Desktop
+  - Visual Studio Code
 
 ## Install
 

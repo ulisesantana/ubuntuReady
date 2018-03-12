@@ -78,9 +78,6 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 ##Install Slack
 sudo snap install slack --classic 
 
-##Install Telegram
-sudo snap install telegram-sergiusens
-
 ##Install Skype
 sudo apt-get install skype -y
 sudo apt-get install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 -y
@@ -113,13 +110,14 @@ sudo apt-get install git -y
 
 ##Install docker
 sudo apt-get install -y docker-engine
-sudo usermod -aG docker $(whoami) # Enable use docker without sudo
+sudo usermod -aG docker $USER # Enable use docker without sudo
 
 ##Install Node Version Manager
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install --lts
 
 ##Install Filezilla
 sudo apt-get install filezilla -y
@@ -147,3 +145,8 @@ mkdir -p projects/lab
 
 # AUTOREMOVE TRASH FILES
 sudo apt-get autoremove -y
+
+# Open for downloads
+firefox https://www.jetbrains.com/toolbox/download/download-thanks.html?platform=linux
+firefox https://telegram.org/dl/desktop/linux
+firefox https://code.visualstudio.com/docs/?dv=linux64_deb
